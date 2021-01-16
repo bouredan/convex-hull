@@ -3,4 +3,4 @@ project(convex_hull)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(convex_hull src/main.cpp)
+add_executable(convex_hull main.cpp src/input_generator.cpp src/input_generator.h)
