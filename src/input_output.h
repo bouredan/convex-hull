@@ -10,7 +10,7 @@
 
 std::set<point> read_input_file(const std::string &path);
 
-bool save_points_to_file(const std::set<point > &points, const std::string &path);
+bool write_points_to_file(const std::set<point > &points, const std::string &path);
 
 class input_generator {
 public:

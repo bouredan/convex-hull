@@ -3,13 +3,12 @@
 #include <set>
 #include "convex_hull.h"
 
-std::set<point > quickhull(const std::set<point > &points) {
+std::set<point> quickhull(const std::set<point> &points) {
     if (points.size() <= 2) {
         return points;
     }
-
-    std::set<point > sorted_points = std::set<point >(points);
-    std::set<point > convex_hull;
+    std::set<point> sorted_points = std::set<point>(points);
+    std::set<point> convex_hull;
 
     // we start by most left and right points (which are first and last in sorted set)
     point most_left = *sorted_points.begin();
@@ -20,7 +19,7 @@ std::set<point > quickhull(const std::set<point > &points) {
     return convex_hull;
 }
 
-std::set<point > quickhull_rec(const std::set<point > &points, std::set<point > &convex_hull, point p1, point p2, bool is_upper_side) {
+std::set<point> quickhull_rec(const std::set<point> &points, std::set<point> &convex_hull, point p1, point p2, bool is_upper_side) {
     double max_distance = 0;
     point farthest_point;
     for (point p : points) {

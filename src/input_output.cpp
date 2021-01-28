@@ -3,9 +3,9 @@
 #include <iostream>
 #include "input_output.h"
 
-std::set<point > read_input_file(const std::string &path) {
+std::set<point> read_input_file(const std::string &path) {
     std::ifstream input_file(path);
-    std::set<point > points;
+    std::set<point> points;
     double x, y;
     while (input_file >> x >> y) {
         points.emplace(x, y);
@@ -13,7 +13,7 @@ std::set<point > read_input_file(const std::string &path) {
     return points;
 }
 
-bool save_points_to_file(const std::set<point > &points, const std::string &path) {
+bool write_points_to_file(const std::set<point> &points, const std::string &path) {
     try {
         std::ofstream input_file(path);
         for (point p: points) {
